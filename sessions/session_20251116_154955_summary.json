@@ -1,0 +1,486 @@
+{
+  "kpis": {
+    "session_id": "20251116_154955",
+    "start_time": "2025-11-16T15:49:55.766863",
+    "duration_seconds": 15.0,
+    "duration_minutes": 0.25,
+    "total_data_points": 1090,
+    "max_fatigue_score": 4,
+    "avg_fatigue_score": 0.9,
+    "total_yawns": 0,
+    "time_to_fatigue_minutes": 0.25,
+    "total_distance_km": 20.32,
+    "avg_speed_kmh": 67.1,
+    "avg_co2_g_per_km": 119.0,
+    "total_co2_g": 2418.9,
+    "optimal_co2_g_per_km": 110,
+    "co2_excess_percent": 8.2,
+    "potential_co2_savings_g": 183.8,
+    "avg_eco_score": 95.8,
+    "total_events": 653,
+    "events_by_type": {
+      "idling": 1,
+      "harsh_acceleration": 23,
+      "steering_oscillation": 598,
+      "harsh_braking": 31
+    },
+    "events_per_km": 32.14
+  },
+  "events": [
+    {
+      "timestamp": "2025-11-16 15:49:56.759",
+      "type": "idling",
+      "severity": "medium",
+      "value": 50.4,
+      "message": "Ralenti moteur inutile: 50% accélérateur à l'arrêt",
+      "eco_impact": "+50 g/km CO2 gaspillé",
+      "recommendation": "Couper le moteur si arrêt > 30 secondes"
+    },
+    {
+      "timestamp": "2025-11-16 15:49:57.759",
+      "type": "harsh_acceleration",
+      "severity": "critical",
+      "value": 4.925,
+      "message": "Accélération brusque: 4.92 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:49:58.759",
+      "type": "harsh_acceleration",
+      "severity": "critical",
+      "value": 4.234,
+      "message": "Accélération brusque: 4.23 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:00.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 2.951,
+      "message": "Accélération brusque: 2.95 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:00.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 15.82,
+      "message": "Corrections fréquentes volant: 15.8°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:01.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 3.074,
+      "message": "Accélération brusque: 3.07 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:01.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 24.93,
+      "message": "Corrections fréquentes volant: 24.9°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:02.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 25.94,
+      "message": "Corrections fréquentes volant: 25.9°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:03.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 2.797,
+      "message": "Accélération brusque: 2.80 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:03.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 25.48,
+      "message": "Corrections fréquentes volant: 25.5°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:04.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 27.09,
+      "message": "Corrections fréquentes volant: 27.1°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:05.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 2.541,
+      "message": "Accélération brusque: 2.54 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:06.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 3.227,
+      "message": "Accélération brusque: 3.23 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:06.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 18.52,
+      "message": "Corrections fréquentes volant: 18.5°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:07.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 28.83,
+      "message": "Corrections fréquentes volant: 28.8°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:08.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 3.142,
+      "message": "Accélération brusque: 3.14 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:08.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 40.64,
+      "message": "Corrections fréquentes volant: 40.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:09.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 33.19,
+      "message": "Corrections fréquentes volant: 33.2°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:10.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 27.42,
+      "message": "Corrections fréquentes volant: 27.4°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:11.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 24.12,
+      "message": "Corrections fréquentes volant: 24.1°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:12.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 18.34,
+      "message": "Corrections fréquentes volant: 18.3°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:13.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 27.61,
+      "message": "Corrections fréquentes volant: 27.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:14.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 22.44,
+      "message": "Corrections fréquentes volant: 22.4°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:15.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 3.272,
+      "message": "Accélération brusque: 3.27 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:15.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 26.46,
+      "message": "Corrections fréquentes volant: 26.5°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:16.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 30.05,
+      "message": "Corrections fréquentes volant: 30.1°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:17.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 39.22,
+      "message": "Corrections fréquentes volant: 39.2°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:18.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 42.63,
+      "message": "Corrections fréquentes volant: 42.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:19.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 25.02,
+      "message": "Corrections fréquentes volant: 25.0°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:22.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 2.904,
+      "message": "Accélération brusque: 2.90 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:28.759",
+      "type": "harsh_acceleration",
+      "severity": "high",
+      "value": 3.484,
+      "message": "Accélération brusque: 3.48 m/s²",
+      "eco_impact": "+15% CO2",
+      "recommendation": "Accélérations plus progressives pour réduire consommation"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:38.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 17.59,
+      "message": "Corrections fréquentes volant: 17.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:40.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 17.49,
+      "message": "Corrections fréquentes volant: 17.5°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:42.759",
+      "type": "harsh_braking",
+      "severity": "high",
+      "value": -3.135,
+      "message": "Freinage brusque: -3.13 m/s²",
+      "eco_impact": "+10% CO2 (énergie gaspillée)",
+      "recommendation": "Anticiper le trafic pour freiner en douceur"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:47.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -16.9,
+      "message": "Corrections fréquentes volant: 16.9°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:53.759",
+      "type": "harsh_braking",
+      "severity": "high",
+      "value": -2.566,
+      "message": "Freinage brusque: -2.57 m/s²",
+      "eco_impact": "+10% CO2 (énergie gaspillée)",
+      "recommendation": "Anticiper le trafic pour freiner en douceur"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:53.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 16.29,
+      "message": "Corrections fréquentes volant: 16.3°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:50:58.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": 16.22,
+      "message": "Corrections fréquentes volant: 16.2°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:08.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -18.4,
+      "message": "Corrections fréquentes volant: 18.4°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:09.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -20.36,
+      "message": "Corrections fréquentes volant: 20.4°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:10.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -17.32,
+      "message": "Corrections fréquentes volant: 17.3°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:15.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -17.61,
+      "message": "Corrections fréquentes volant: 17.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:16.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -17.13,
+      "message": "Corrections fréquentes volant: 17.1°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:18.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -28.82,
+      "message": "Corrections fréquentes volant: 28.8°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:19.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -19.57,
+      "message": "Corrections fréquentes volant: 19.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:20.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -18.61,
+      "message": "Corrections fréquentes volant: 18.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:22.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -23.64,
+      "message": "Corrections fréquentes volant: 23.6°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:23.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -31.39,
+      "message": "Corrections fréquentes volant: 31.4°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:24.759",
+      "type": "harsh_braking",
+      "severity": "high",
+      "value": -2.597,
+      "message": "Freinage brusque: -2.60 m/s²",
+      "eco_impact": "+10% CO2 (énergie gaspillée)",
+      "recommendation": "Anticiper le trafic pour freiner en douceur"
+    },
+    {
+      "timestamp": "2025-11-16 15:51:24.759",
+      "type": "steering_oscillation",
+      "severity": "low",
+      "value": -31.18,
+      "message": "Corrections fréquentes volant: 31.2°",
+      "eco_impact": "Résistance aérodynamique",
+      "recommendation": "Maintenir trajectoire stable - signe possible de fatigue?"
+    }
+  ],
+  "recommendations": [
+    "⚠️ FATIGUE: Vous montrez des signes de fatigue après seulement 0 minutes. Considérez des pauses plus fréquentes (toutes les 2h recommandé).",
+    "🚗 CONDUITE: 23 accélérations brusques détectées. Des accélérations progressives réduiraient votre consommation de 10-15%.",
+    "🚗 CONDUITE: 31 freinages brusques. Anticipez le trafic pour freiner en douceur et récupérer de l'énergie."
+  ]
+}
