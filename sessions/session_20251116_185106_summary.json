@@ -1,0 +1,57 @@
+{
+  "session_id": "20251116_185106",
+  "start_time": "2025-11-16 18:51:06",
+  "end_time": "2025-11-16 18:51:09",
+  "kpis": {
+    "duration_minutes": 0.1,
+    "total_datapoints": 4,
+    "distance_km": 0.06,
+    "avg_speed_kmh": 55.9,
+    "max_fatigue_score": 5.8,
+    "avg_fatigue_score": 2.3,
+    "time_to_fatigue_min": 0.1,
+    "total_yawns": 0,
+    "eco_score": 100.0,
+    "avg_co2_gkm": 143.6,
+    "co2_excess_pct": 30.5,
+    "potential_co2_savings_g": 2016.0,
+    "total_events": 4,
+    "events_per_km": 66.67,
+    "event_breakdown": {
+      "harsh_acceleration": 2,
+      "speeding": 2
+    }
+  },
+  "events": [
+    {
+      "timestamp": "2025-11-16 18:51:07",
+      "type": "harsh_acceleration",
+      "speed": 28.9,
+      "fatigue_score": 0.5546666666666666
+    },
+    {
+      "timestamp": "2025-11-16 18:51:08",
+      "type": "harsh_acceleration",
+      "speed": 66.0,
+      "fatigue_score": 2.7329092746666674
+    },
+    {
+      "timestamp": "2025-11-16 18:51:08",
+      "type": "speeding",
+      "speed": 66.0,
+      "fatigue_score": 2.7329092746666674
+    },
+    {
+      "timestamp": "2025-11-16 18:51:09",
+      "type": "speeding",
+      "speed": 74.0,
+      "fatigue_score": 5.7647527045047955
+    }
+  ],
+  "recommendations": [
+    "⚠️ FATIGUE: Vous montrez des signes de fatigue après seulement 0 minutes. Considérez des pauses plus fréquentes (toutes les 2h recommandé).",
+    "🚗 CONDUITE: 2 accélérations brusques détectées. Des accélérations progressives réduiraient votre consommation de 10-15%.",
+    "🌱 ÉCO-IMPACT: Votre consommation est 30.5% au-dessus de l'optimal. Potentiel d'économie: 2016g CO2.",
+    "⚠️ CONDUITE: Taux d'événements élevé (66.7/km). Conduite plus fluide = sécurité + économies."
+  ]
+}

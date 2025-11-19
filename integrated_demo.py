@@ -9,6 +9,11 @@ import threading
 from datetime import datetime
 import sys
 import os
+from queue import Queue
+try:
+    import pyttsx3  # TTS pour alertes vocales
+except ImportError:
+    pyttsx3 = None
 
 # Import des modules du projet
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'Fatigue detection'))
@@ -35,6 +40,11 @@ class IntegratedDriverMonitoring:
         self.analyzer = BehaviorAnalyzer()
         self.logger = SessionLogger()
         
+        # Historique pour KPIs phase 1
+        self.fatigue_history = []
+        self.eco_history = []
+        self.event_history = []
+        
         # État fatigue (simulé si pas de caméra)
         self.fatigue_metrics = {
             'composite_score': 0,
@@ -60,6 +70,27 @@ class IntegratedDriverMonitoring:
                 print("   Mode simulation fatigue activé")
                 self.use_camera = False
         
+        # Initialisation alertes vocales (Phase 1)
+        self.voice_enabled = False
+        self.voice_queue: Queue[str] = Queue()
+        self.voice_cooldowns = {
+            'critical_fatigue': 30,
+            'high_fatigue': 60,
+            'harsh_events': 45,
+            'eco_drop': 120
+        }
+        self.last_voice_time = {k: 0 for k in self.voice_cooldowns.keys()}
+        self.voice_thread = None
+        if pyttsx3:
+            try:
+                self.voice_engine = pyttsx3.init()
+                self.voice_engine.setProperty('rate', 175)
+                self.voice_enabled = True
+                print("🔊 Alertes vocales activées")
+            except Exception as e:
+                print(f"⚠️ TTS indisponible: {e}")
+                self.voice_enabled = False
+        
     def process_fatigue(self):
         """Thread séparé pour traiter la détection de fatigue"""
         while self.running:
@@ -80,6 +111,11 @@ class IntegratedDriverMonitoring:
         if self.use_camera:
             self.camera_thread = threading.Thread(target=self.process_fatigue)
             self.camera_thread.start()
+        
+        # Thread vocal
+        if self.voice_enabled:
+            self.voice_thread = threading.Thread(target=self._voice_loop, daemon=True)
+            self.voice_thread.start()
         
         print("=" * 70)
         print("🚗 SYSTÈME INTÉGRÉ DE SURVEILLANCE CONDUCTEUR & ÉCO-CONDUITE")
@@ -131,6 +167,13 @@ class IntegratedDriverMonitoring:
                     driving_data,
                     analysis
                 )
+                # Historique pour KPIs rapides
+                self.fatigue_history.append(self.fatigue_metrics['composite_score'])
+                self.eco_history.append(analysis['eco_score'])
+                self.event_history.append(len(events))
+                
+                # Alertes vocales Phase 1
+                self._evaluate_voice_alerts(self.fatigue_metrics['composite_score'], analysis['eco_score'], events)
                 
                 # 6. Affichage temps réel (toutes les secondes)
                 if iteration % 1 == 0:
@@ -152,6 +195,10 @@ class IntegratedDriverMonitoring:
             self.running = False
             if self.camera_thread:
                 self.camera_thread.join()
+            if self.voice_thread and self.voice_enabled:
+                # Vider file et terminer
+                self.voice_enabled = False
+                self.voice_queue.put(None)
             
             # Sauvegarder et afficher résumé
             print("\n" + "=" * 70)
@@ -182,6 +229,45 @@ class IntegratedDriverMonitoring:
             return f"CO2 élevé ({driving['co2_estimate_gkm']:.0f}g/km) - réduire vitesse/accélérations"
         
         return ""
+
+    # ====== Alertes Vocales (Phase 1) ======
+    def _voice_loop(self):
+        """Consomme la file d'attente des messages vocaux"""
+        while self.voice_enabled:
+            msg = self.voice_queue.get()
+            if msg is None:
+                break
+            try:
+                self.voice_engine.say(msg)
+                self.voice_engine.runAndWait()
+            except Exception:
+                pass
+            time.sleep(0.2)
+
+    def _queue_voice(self, key: str, message: str):
+        """Ajoute un message vocal selon cooldown"""
+        now = time.time()
+        cooldown = self.voice_cooldowns.get(key, 60)
+        if now - self.last_voice_time[key] >= cooldown:
+            self.last_voice_time[key] = now
+            self.voice_queue.put(message)
+
+    def _evaluate_voice_alerts(self, fatigue_score: float, eco_score: float, events: list):
+        """Détermine quelles alertes vocales déclencher"""
+        if not self.voice_enabled:
+            return
+        # Fatigue critique
+        if fatigue_score >= 70:
+            self._queue_voice('critical_fatigue', 'Fatigue critique détectée. Veuillez vous arrêter immédiatement et prendre une pause.')
+        elif fatigue_score >= 40:
+            self._queue_voice('high_fatigue', 'Niveau de fatigue élevé. Préparez une pause prochainement.')
+        # Événements brusques répétés
+        harsh = sum(1 for e in events if e in ['harsh_acceleration', 'harsh_braking'])
+        if harsh > 0:
+            self._queue_voice('harsh_events', 'Conduite brusque détectée. Accélérez et freinez plus progressivement.')
+        # Baisse éco-score
+        if eco_score < 60:
+            self._queue_voice('eco_drop', 'Score éco faible. Adoptez une vitesse stable et évitez les accélérations fortes.')
     
     def _display_status(self, elapsed_sec, fatigue, driving, events, eco_score, recommendation):
         """Affiche le statut en temps réel"""
@@ -255,6 +341,19 @@ class IntegratedDriverMonitoring:
         print(f"\n💡 RECOMMANDATIONS:")
         for rec in summary['recommendations']:
             print(f"   {rec}")
+        
+        # Ajout KPIs Phase 1 rapides
+        if self.fatigue_history:
+            slope = (self.fatigue_history[-1] - self.fatigue_history[0]) / max(1, len(self.fatigue_history))
+            avg_eco = sum(self.eco_history)/len(self.eco_history) if self.eco_history else 0
+            print("\n📈 KPIs supplémentaires:")
+            print(f"   • Slope fatigue (approx): {slope:.2f} / tick")
+            print(f"   • Eco-score moyen session: {avg_eco:.1f}/100")
+            if avg_eco < 70:
+                print("   • Suggestion: Réduire variations brusques pour remonter l'éco-score")
+        
+        if self.voice_enabled:
+            print("\n🔊 Alertes vocales actives durant la session")
         
         print("\n" + "=" * 70)
         print("📁 Fichiers sauvegardés:")

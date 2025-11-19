@@ -1,0 +1,63 @@
+{
+  "session_id": "20251119_180058",
+  "start_time": "2025-11-19 18:00:58",
+  "end_time": "2025-11-19 18:01:04",
+  "kpis": {
+    "duration_minutes": 0.1,
+    "total_datapoints": 7,
+    "distance_km": 0.18,
+    "avg_speed_kmh": 91.3,
+    "max_fatigue_score": 1.3,
+    "avg_fatigue_score": 0.6,
+    "time_to_fatigue_min": 0.1,
+    "total_yawns": 0,
+    "eco_score": 40.0,
+    "avg_co2_gkm": 107.3,
+    "co2_excess_pct": -2.4,
+    "potential_co2_savings_g": 0,
+    "total_events": 5,
+    "events_per_km": 27.78,
+    "event_breakdown": {
+      "harsh_braking": 4,
+      "speeding": 1
+    }
+  },
+  "events": [
+    {
+      "timestamp": "2025-11-19 18:00:58",
+      "type": "harsh_braking",
+      "speed": 94.5,
+      "fatigue_score": 0.0
+    },
+    {
+      "timestamp": "2025-11-19 18:00:59",
+      "type": "harsh_braking",
+      "speed": 88.2,
+      "fatigue_score": 0.09175633482476607
+    },
+    {
+      "timestamp": "2025-11-19 18:01:01",
+      "type": "speeding",
+      "speed": 78.2,
+      "fatigue_score": 0.4763011813006312
+    },
+    {
+      "timestamp": "2025-11-19 18:01:03",
+      "type": "harsh_braking",
+      "speed": 92.8,
+      "fatigue_score": 1.0250764804476957
+    },
+    {
+      "timestamp": "2025-11-19 18:01:04",
+      "type": "harsh_braking",
+      "speed": 100.0,
+      "fatigue_score": 1.3474343931965915
+    }
+  ],
+  "recommendations": [
+    "⚠️ FATIGUE: Vous montrez des signes de fatigue après seulement 0 minutes. Considérez des pauses plus fréquentes (toutes les 2h recommandé).",
+    "🚗 CONDUITE: 4 freinages brusques. Anticipez le trafic pour freiner en douceur et récupérer de l'énergie.",
+    "🌱 ÉCO-SCORE: 40.0/100. Conseils: vitesse stable, anticipation, accélérations douces.",
+    "⚠️ CONDUITE: Taux d'événements élevé (27.8/km). Conduite plus fluide = sécurité + économies."
+  ]
+}
