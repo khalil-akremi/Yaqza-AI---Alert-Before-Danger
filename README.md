@@ -403,4 +403,5 @@ MIT License - voir fichier [LICENSE](LICENSE)
 
 ---
 
-**Fait avec passion pour un monde plus sûr et plus vert.**
+**Fait avec passion pour un monde plus sûr et plus vert.**#   Y a q z a - A I - D r i v e r - F a t i g u e - d e t e c t i o n - p l a t f o r m  
+ 
