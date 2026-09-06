@@ -3,6 +3,22 @@ Integrated Demo - Démo complète du système de monitoring conducteur + éco-co
 Combine détection fatigue (webcam) + simulation télémétrie + analyse temps réel
 """
 
+# ---------------------------------------------------------------------------
+# Path fix: Python 3.12 on this machine has a wrong usersitepackages entry
+# (contains '\lib\' in the path when it should not). We correct it here so
+# that packages installed with pip --user (e.g. opencv-python, dlib) are found.
+# ---------------------------------------------------------------------------
+import sys as _sys
+import site as _site
+_real_user_site = _site.getusersitepackages()          # e.g. …\Roaming\Python\Python312\site-packages
+_bad_user_site  = _real_user_site.replace("\\site-packages", "\\lib\\site-packages")
+if _bad_user_site in _sys.path:
+    idx = _sys.path.index(_bad_user_site)
+    _sys.path[idx] = _real_user_site
+elif _real_user_site not in _sys.path:
+    _sys.path.insert(0, _real_user_site)
+# ---------------------------------------------------------------------------
+
 import cv2
 import time
 import threading
@@ -92,11 +108,18 @@ class IntegratedDriverMonitoring:
                 self.voice_enabled = False
         
     def process_fatigue(self):
-        """Thread séparé pour traiter la détection de fatigue"""
+        """Thread séparé pour traiter la détection de fatigue via webcam."""
+        # Start the internal camera loop (opens its own cv2 window + background thread)
+        self.fatigue_detector.start()
+
+        # Poll the shared metrics at 10 Hz and push them into self.fatigue_metrics
         while self.running:
-            # Ici on mettrait la logique de capture webcam
-            # Pour l'instant, simulation
+            metrics = self.fatigue_detector.get_metrics()
+            self.fatigue_metrics.update(metrics)
             time.sleep(0.1)
+
+        # When main loop ends, shut the camera down cleanly
+        self.fatigue_detector.stop()
     
     def run(self, duration_seconds=120):
         """
@@ -135,14 +158,16 @@ class IntegratedDriverMonitoring:
             while time.time() - start_time < duration_seconds:
                 iteration += 1
                 
-                # 1. Simuler augmentation fatigue progressive
+                # 1. Augmentation fatigue progressive (simulation si pas de caméra)
                 elapsed = time.time() - start_time
                 time_factor = elapsed / duration_seconds
                 simulated_fatigue = min(100, time_factor ** 1.5 * 120)
-                self.fatigue_metrics['composite_score'] = simulated_fatigue
+                if not self.use_camera:
+                    # Only override the score in camera-less mode
+                    self.fatigue_metrics['composite_score'] = simulated_fatigue
                 
                 # 2. Générer données de conduite (influencées par fatigue)
-                driving_data = self.simulator.update(fatigue_score=simulated_fatigue)
+                driving_data = self.simulator.update(fatigue_score=self.fatigue_metrics['composite_score'])
                 
                 # 3. Analyser comportement
                 events, metrics = self.analyzer.analyze_datapoint(driving_data)

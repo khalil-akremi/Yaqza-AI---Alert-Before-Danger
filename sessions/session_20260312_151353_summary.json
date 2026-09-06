@@ -1,0 +1,337 @@
+{
+  "session_id": "20260312_151353",
+  "start_time": "2026-03-12 15:13:53",
+  "end_time": "2026-03-12 15:15:53",
+  "kpis": {
+    "duration_minutes": 2.0,
+    "total_datapoints": 120,
+    "distance_km": 2.11,
+    "avg_speed_kmh": 63.4,
+    "max_fatigue_score": 100.0,
+    "avg_fatigue_score": 46.6,
+    "time_to_fatigue_min": 1.0,
+    "total_yawns": 0,
+    "eco_score": 36.5,
+    "avg_co2_gkm": 113.2,
+    "co2_excess_pct": 2.9,
+    "potential_co2_savings_g": 6753.8,
+    "total_events": 112,
+    "events_per_km": 53.08,
+    "event_breakdown": {
+      "harsh_acceleration": 20,
+      "steering_oscillation": 42,
+      "speeding": 24,
+      "harsh_braking": 26
+    }
+  },
+  "events": [
+    {
+      "timestamp": "2026-03-12 15:13:53",
+      "type": "harsh_acceleration",
+      "speed": 100.0,
+      "fatigue_score": 0.0
+    },
+    {
+      "timestamp": "2026-03-12 15:13:57",
+      "type": "harsh_acceleration",
+      "speed": 40.0,
+      "fatigue_score": 0.7335298523838129
+    },
+    {
+      "timestamp": "2026-03-12 15:13:59",
+      "type": "harsh_acceleration",
+      "speed": 67.6,
+      "fatigue_score": 1.347081322821336
+    },
+    {
+      "timestamp": "2026-03-12 15:13:59",
+      "type": "speeding",
+      "speed": 67.6,
+      "fatigue_score": 1.347081322821336
+    },
+    {
+      "timestamp": "2026-03-12 15:14:00",
+      "type": "harsh_braking",
+      "speed": 96.1,
+      "fatigue_score": 1.6972665818307906
+    },
+    {
+      "timestamp": "2026-03-12 15:14:01",
+      "type": "harsh_acceleration",
+      "speed": 89.3,
+      "fatigue_score": 2.0733375711286492
+    },
+    {
+      "timestamp": "2026-03-12 15:14:02",
+      "type": "harsh_acceleration",
+      "speed": 71.7,
+      "fatigue_score": 2.4742614588734475
+    },
+    {
+      "timestamp": "2026-03-12 15:14:02",
+      "type": "speeding",
+      "speed": 71.7,
+      "fatigue_score": 2.4742614588734475
+    },
+    {
+      "timestamp": "2026-03-12 15:14:03",
+      "type": "harsh_braking",
+      "speed": 41.3,
+      "fatigue_score": 2.897666988981225
+    },
+    {
+      "timestamp": "2026-03-12 15:14:04",
+      "type": "speeding",
+      "speed": 68.5,
+      "fatigue_score": 3.34260389025927
+    },
+    {
+      "timestamp": "2026-03-12 15:14:05",
+      "type": "harsh_acceleration",
+      "speed": 81.0,
+      "fatigue_score": 3.8083650651036614
+    },
+    {
+      "timestamp": "2026-03-12 15:14:08",
+      "type": "speeding",
+      "speed": 77.0,
+      "fatigue_score": 5.321951765579203
+    },
+    {
+      "timestamp": "2026-03-12 15:14:09",
+      "type": "speeding",
+      "speed": 63.5,
+      "fatigue_score": 5.864426351058179
+    },
+    {
+      "timestamp": "2026-03-12 15:14:11",
+      "type": "harsh_acceleration",
+      "speed": 42.4,
+      "fatigue_score": 6.996752572973812
+    },
+    {
+      "timestamp": "2026-03-12 15:14:13",
+      "type": "harsh_acceleration",
+      "speed": 40.5,
+      "fatigue_score": 8.196852406599403
+    },
+    {
+      "timestamp": "2026-03-12 15:14:16",
+      "type": "speeding",
+      "speed": 55.9,
+      "fatigue_score": 10.107587665963834
+    },
+    {
+      "timestamp": "2026-03-12 15:14:17",
+      "type": "speeding",
+      "speed": 74.9,
+      "fatigue_score": 10.773138801416371
+    },
+    {
+      "timestamp": "2026-03-12 15:14:19",
+      "type": "harsh_acceleration",
+      "speed": 58.7,
+      "fatigue_score": 12.147237356677108
+    },
+    {
+      "timestamp": "2026-03-12 15:14:19",
+      "type": "speeding",
+      "speed": 58.7,
+      "fatigue_score": 12.147237356677108
+    },
+    {
+      "timestamp": "2026-03-12 15:14:21",
+      "type": "speeding",
+      "speed": 57.8,
+      "fatigue_score": 13.597093609505299
+    },
+    {
+      "timestamp": "2026-03-12 15:14:22",
+      "type": "speeding",
+      "speed": 55.3,
+      "fatigue_score": 14.330823830480725
+    },
+    {
+      "timestamp": "2026-03-12 15:14:23",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 15.077518977484512
+    },
+    {
+      "timestamp": "2026-03-12 15:14:26",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 17.390873575522978
+    },
+    {
+      "timestamp": "2026-03-12 15:14:28",
+      "type": "speeding",
+      "speed": 63.8,
+      "fatigue_score": 18.99332851106552
+    },
+    {
+      "timestamp": "2026-03-12 15:14:30",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 20.641513301150276
+    },
+    {
+      "timestamp": "2026-03-12 15:14:33",
+      "type": "harsh_braking",
+      "speed": 100.0,
+      "fatigue_score": 23.198989518141467
+    },
+    {
+      "timestamp": "2026-03-12 15:14:37",
+      "type": "speeding",
+      "speed": 71.3,
+      "fatigue_score": 26.76054167441917
+    },
+    {
+      "timestamp": "2026-03-12 15:14:41",
+      "type": "harsh_braking",
+      "speed": 100.0,
+      "fatigue_score": 30.511020208347553
+    },
+    {
+      "timestamp": "2026-03-12 15:14:42",
+      "type": "harsh_acceleration",
+      "speed": 100.0,
+      "fatigue_score": 31.470525129135048
+    },
+    {
+      "timestamp": "2026-03-12 15:14:47",
+      "type": "harsh_braking",
+      "speed": 59.1,
+      "fatigue_score": 36.40272682044953
+    },
+    {
+      "timestamp": "2026-03-12 15:14:47",
+      "type": "speeding",
+      "speed": 59.1,
+      "fatigue_score": 36.40272682044953
+    },
+    {
+      "timestamp": "2026-03-12 15:14:48",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 37.417549195965776
+    },
+    {
+      "timestamp": "2026-03-12 15:14:49",
+      "type": "speeding",
+      "speed": 62.3,
+      "fatigue_score": 38.44114323404927
+    },
+    {
+      "timestamp": "2026-03-12 15:14:52",
+      "type": "harsh_acceleration",
+      "speed": 45.1,
+      "fatigue_score": 41.56601980445439
+    },
+    {
+      "timestamp": "2026-03-12 15:14:53",
+      "type": "harsh_acceleration",
+      "speed": 53.7,
+      "fatigue_score": 42.62562260719824
+    },
+    {
+      "timestamp": "2026-03-12 15:14:57",
+      "type": "speeding",
+      "speed": 61.4,
+      "fatigue_score": 46.95401650905246
+    },
+    {
+      "timestamp": "2026-03-12 15:15:00",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 50.2891703707871
+    },
+    {
+      "timestamp": "2026-03-12 15:15:01",
+      "type": "harsh_braking",
+      "speed": 51.8,
+      "fatigue_score": 51.417976286107454
+    },
+    {
+      "timestamp": "2026-03-12 15:15:06",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 57.18643015481627
+    },
+    {
+      "timestamp": "2026-03-12 15:15:07",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 58.3643960541613
+    },
+    {
+      "timestamp": "2026-03-12 15:15:08",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 59.55068149566375
+    },
+    {
+      "timestamp": "2026-03-12 15:15:10",
+      "type": "harsh_braking",
+      "speed": 53.8,
+      "fatigue_score": 61.94627264781492
+    },
+    {
+      "timestamp": "2026-03-12 15:15:12",
+      "type": "harsh_braking",
+      "speed": 90.0,
+      "fatigue_score": 64.38169223908316
+    },
+    {
+      "timestamp": "2026-03-12 15:15:13",
+      "type": "harsh_acceleration",
+      "speed": 73.5,
+      "fatigue_score": 65.60788219788463
+    },
+    {
+      "timestamp": "2026-03-12 15:15:13",
+      "type": "speeding",
+      "speed": 73.5,
+      "fatigue_score": 65.60788219788463
+    },
+    {
+      "timestamp": "2026-03-12 15:15:14",
+      "type": "speeding",
+      "speed": 61.1,
+      "fatigue_score": 66.84098662179923
+    },
+    {
+      "timestamp": "2026-03-12 15:15:15",
+      "type": "speeding",
+      "speed": 64.4,
+      "fatigue_score": 68.08134067519244
+    },
+    {
+      "timestamp": "2026-03-12 15:15:18",
+      "type": "harsh_braking",
+      "speed": 40.0,
+      "fatigue_score": 71.84858993863561
+    },
+    {
+      "timestamp": "2026-03-12 15:15:19",
+      "type": "speeding",
+      "speed": 60.3,
+      "fatigue_score": 73.1192209250516
+    },
+    {
+      "timestamp": "2026-03-12 15:15:22",
+      "type": "harsh_acceleration",
+      "speed": 40.0,
+      "fatigue_score": 76.97473980468882
+    }
+  ],
+  "recommendations": [
+    "⚠️ FATIGUE CRITIQUE: Pause immédiate recommandée! La fatigue augmente drastiquement le risque d'accident.",
+    "⚠️ FATIGUE: Vous montrez des signes de fatigue après seulement 1 minutes. Considérez des pauses plus fréquentes (toutes les 2h recommandé).",
+    "🚗 CONDUITE: 20 accélérations brusques détectées. Des accélérations progressives réduiraient votre consommation de 10-15%.",
+    "🚗 CONDUITE: 26 freinages brusques. Anticipez le trafic pour freiner en douceur et récupérer de l'énergie.",
+    "🌱 ÉCO-SCORE: 36.5/100. Conseils: vitesse stable, anticipation, accélérations douces.",
+    "⚠️ CONDUITE: Taux d'événements élevé (53.1/km). Conduite plus fluide = sécurité + économies."
+  ]
+}
